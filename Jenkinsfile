@@ -40,7 +40,6 @@ podTemplate(label: 'jenkins-slave-pod',
                 // https://gitlab.com/gitlab-org/gitlab-foss/issues/38910
                 checkout([$class: 'GitSCM',
                     // branches: [[name: '*/dockerizing']],
-                    branches: [[name: ]],
                     userRemoteConfigs: [
                         [url: 'https://github.com/govy68/T-jenkins-github-1.git', credentialsId: 'github_ansible-in-action']
                     ],
