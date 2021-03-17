@@ -32,7 +32,7 @@ podTemplate(label: 'jenkins-slave-pod',
 
 {
     node('jenkins-slave-pod') { 
-        def registry = "192.168.194.129:5000"
+        def registry = "10.101.240.188:5000"
         def registryCredential = "private-repository-id"
 
         stage('Clone repository') {
@@ -41,7 +41,7 @@ podTemplate(label: 'jenkins-slave-pod',
                 checkout([$class: 'GitSCM',
                     // branches: [[name: '*/dockerizing']],
                     userRemoteConfigs: [
-                        [url: 'https://github.com/govy68/T-jenkins-github-1.git', credentialsId: 'github_ansible-in-action']
+                        [url: 'https://github.com/govy68/T-jenkins-github-1.git', credentialsId: '87043c0c-c527-4c4c-8aa8-a9edf25e15f4']
                     ],
                 ])
             }
